@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+
+def savings_progress(goal, saved):
+    remaining = max(0, goal - saved)
+
+    # Visualize progress
+    plt.bar(['Saved', 'Remaining'], [saved, remaining], color=['green', 'red'])
+    plt.title('Savings Progress')
+    plt.ylabel('Amount')
+    plt.ylim(0, goal)
+    plt.show()
+
+# Example usage
+goal_amount = 5000
+saved_amount = 3200
+
+savings_progress(goal_amount, saved_amount)
